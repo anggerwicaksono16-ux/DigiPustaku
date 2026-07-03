@@ -10,11 +10,11 @@
    ================================================ */
    const quizData = {
     1: [
-      { q: "Manakah elemen kunci dalam strategi perpustakaan khusus?", opts: ["Penyusunan visi & misi yang jelas", "Pengadaan buku sebanyak mungkin", "Pembatasan akses pengguna", "Pengurangan anggaran operasional"], correct: 0 },
-      { q: "Apa yang dimaksud dengan perpustakaan khusus?", opts: ["Perpustakaan umum untuk semua kalangan", "Perpustakaan yang melayani kebutuhan informasi organisasi tertentu", "Perpustakaan sekolah dasar", "Perpustakaan yang hanya menyimpan novel"], correct: 1 },
-      { q: "Dalam menyusun visi perpustakaan khusus, hal utama yang dipertimbangkan adalah?", opts: ["Selera pribadi pustakawan", "Kebutuhan informasi pengguna dan tujuan organisasi induk", "Jumlah koleksi yang dimiliki", "Luas gedung perpustakaan"], correct: 1 },
-      { q: "Indikator keberhasilan strategi perpustakaan khusus diukur dari?", opts: ["Jumlah buku yang dibeli", "Tingkat kepuasan dan pemanfaatan layanan oleh pengguna", "Jumlah pustakawan yang bekerja", "Ukuran ruangan perpustakaan"], correct: 1 },
-      { q: "Perencanaan strategis perpustakaan khusus sebaiknya dilakukan?", opts: ["Sekali seumur hidup", "Setiap hari", "Secara berkala dan menyesuaikan kebutuhan organisasi", "Hanya saat ada anggaran besar"], correct: 2 }
+      { q: "Berdasarkan naskah, apa karakteristik utama yang membedakan perpustakaan khusus dengan jenis perpustakaan lainnya?", opts: ["Memiliki jumlah koleksi buku fisik paling banyak", "Terbuka bagi seluruh lapisan masyarakat umum", "koleksi dirancang untuk mendukung tugas instansi", "Dikelola sepenuhnya oleh tenaga sukarelawan lembaga"], correct: 2 },
+      { q: "Peraturan manakah yang menjadi acuan utama dalam Standar Nasional Perpustakaan Khusus (SNPK) saat ini?", opts: ["SNPK Nomor 7 Tahun 2022", "Undang-Undang Nomor 43 Tahun 2007", "SNPK Nomor 5 Tahun 2020", " Peraturan Pemerintah Nomor 24 Tahun 2014"], correct: 0 },
+      { q: "Berdasarkan Pasal 2 SNPK, perpustakaan khusus berada pada tiga jenis lembaga berikut, kecuali..?", opts: ["Lembaga pemerintah", "Lembaga non-pemerintah (swasta)", "Rumah ibadah", "Sekolah umum dan madrasah"], correct: 3 },
+      { q: "Ada berapa komponen utama yang wajib dipenuhi dalam pengelolaan perpustakaan khusus menurut standar nasional?", opts: ["4 Komponen", "5 Komponen", "6 Komponen", "7 Komponen"], correct: 2 },
+      { q: "Komponen yang mengatur tentang perencanaan strategis, anggaran tahunan, dan evaluasi kinerja berkala disebut dengan komponen..?", opts: ["Koleksi", "Pengelolaan", "Penyelenggaraan", "Sarana dan Prasarana"], correct: 1 }
     ],
     2: [
       { q: "Apa langkah pertama dalam pengelolaan koleksi perpustakaan khusus?", opts: ["Pelestarian koleksi", "Katalogisasi", "Pengembanan koleksi", "Penyiangan"], correct: 2 },

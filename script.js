@@ -75,9 +75,9 @@
      https://drive.google.com/file/d/FILE_ID/view
      ================================================ */
   const driveVideoIds = {
-    1: '15p4ROw6LGiwkAYmv1dQldVRQA_QFs2ML',
+    1: '1pSx-53H2bgMPjKPnMSrthTMd0nS05PAF',
     2: '1jEPJXRwqmgGtJjZfmg1_1ELB9UhL1bCt',
-    // 3: 'GANTI_DENGAN_ID_DRIVE_MODUL_3',
+    3: '1SXaz0AC5_f7CyJfrgcI7BafmC2CIJteN',
     // 4: 'GANTI_DENGAN_ID_DRIVE_MODUL_4',
     // 5: 'GANTI_DENGAN_ID_DRIVE_MODUL_5',
     // 6: 'GANTI_DENGAN_ID_DRIVE_MODUL_6',
@@ -230,7 +230,7 @@
      ================================================ */
   function startWatchTimer(id) {
     // Default estimasi durasi 4 menit 35 detik (275 detik) — sesuai badge
-    countdownSecs = 300;
+    countdownSecs = 320;
     updateTimerDisplay();
   
     const bar    = document.getElementById('videoProgressBar');
@@ -240,8 +240,8 @@
     timerInterval = setInterval(function () {
       countdownSecs--;
   
-      const elapsed  = 300 - countdownSecs;
-      const pct      = Math.min((elapsed / 300) * 100, 100);
+      const elapsed  = 320 - countdownSecs;
+      const pct      = Math.min((elapsed / 320) * 100, 100);
       bar.style.width = pct + '%';
   
       updateTimerDisplay();

@@ -835,14 +835,20 @@ footer {
 .about-card p  { color: #666; font-size: 0.9rem; line-height: 1.6; }
 
 .about-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
   background: linear-gradient(135deg, #0D1B3E 0%, #1565C0 100%);
   border-radius: var(--radius);
   padding: 32px 24px;
   margin-bottom: 40px;
   text-align: center;
+}
+
+.stat-item {
+  min-width: 120px;
 }
 
 .stat-num   { font-size: 2.2rem; font-weight: 800; color: var(--green-light); }

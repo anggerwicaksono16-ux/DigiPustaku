@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digi-Pustaku- Eksplorasi Video Pengelolaan Perpustakaan</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a class="logo" href="#">
+    <div class="logo-icon">📚</div>
+    DIGI-PUSTAKU
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" class="active" onclick="showPage('beranda', this)">Beranda</a></li>
+    <li><a href="#" onclick="showPage('tentang', this)">Tentang Kami</a></li>
+   <!--  <li><a href="#" onclick="showPage('kontak', this)">Kontak</a></li> -->
+  </ul>
+  <div class="nav-right">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search..." oninput="searchVideos(this.value)" />
+      <span onclick="searchVideos(document.getElementById('searchInput').value)" style="cursor:pointer">🔍</span>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE: BERANDA -->
+<div id="page-beranda" class="page-section">
+
+<div class="hero">
+  <h1>Interactive Video Guide Pengelolaan Perpustakaan Khusus</h1>
+  <p>Seri Panduan Digital untuk Meningkatkan Kualitas dan Inovasi <strong>Perpustakaan Khusus</strong>.</p>
+</div>
+
+<div class="container">
+  <div class="video-grid">
+
+    <!-- Card 1 — Featured -->
+    <div class="video-card featured">
+      <div class="video-thumb thumb-1">
+        <div class="thumb-people">👥</div>
+        <div class="play-btn" onclick="playVideo(1)">▶</div>
+        <div class="duration-badge">04:35</div>
+        <div class="quiz-badge" onclick="openQuiz('Strategi &amp; Visi', 1)">Q Quiz</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Perpustakaan Khusus</div>
+        <div class="card-sub">Sub: Strategi &amp; Visi</div>
+        <div class="card-actions">
+          <button class="btn-play" onclick="playVideo(1)">▶ Play</button>
+          <button class="btn-quiz" onclick="openQuiz('Strategi &amp; Visi', 1)">Start Quiz</button>
+        </div>
+        <div class="quiz-progress"><div class="bar" id="prog1"></div></div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="video-card">
+      <div class="video-thumb thumb-2">
+        <div class="thumb-people">📚</div>
+        <div class="play-btn" onclick="playVideo(2)">▶</div>
+        <div class="duration-badge">04:35</div>
+        <div class="quiz-badge" onclick="openQuiz('Inventarisasi &amp; Akurasi', 2)">Q Quiz</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Pengelolaan Koleksi &amp; Fisik</div>
+        <div class="card-sub">Sub: Inventarisasi &amp; Akurasi</div>
+        <div class="card-actions">
+          <button class="btn-play" onclick="playVideo(2)">▶ Play</button>
+          <button class="btn-quiz" onclick="openQuiz('Inventarisasi &amp; Akurasi', 2)">Start Quiz</button>
+        </div>
+        <div class="quiz-progress"><div class="bar" id="prog2"></div></div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="video-card">
+      <div class="video-thumb thumb-3">
+        <div class="thumb-people">🖥️</div>
+        <div class="play-btn" onclick="playVideo(3)">▶</div>
+        <div class="duration-badge">04:35</div>
+        <div class="quiz-badge" onclick="openQuiz('Fasilitas &amp; Teknologi', 3)">Q Quiz</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Sarana Prasarana </div>
+        <div class="card-sub">Sub: Fasilitas &amp; Teknologi</div>
+        <div class="card-actions">
+          <button class="btn-play" onclick="playVideo(3)">▶ Play</button>
+          <button class="btn-quiz" onclick="openQuiz('Fasilitas &amp; Teknologi', 3)">Start Quiz</button>
+        </div>
+        <div class="quiz-progress"><div class="bar" id="prog3"></div></div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="video-card">
+      <div class="video-thumb thumb-4">
+        <div class="thumb-people">📊</div>
+        <div class="play-btn" onclick="playVideo(4)">▶</div>
+        <div class="duration-badge">04:35</div>
+        <div class="quiz-badge" onclick="openQuiz('Automasi &amp; Sistem', 4)">Q Quiz</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Pelayanan Perpustakaan Khusus</div>
+        <div class="card-sub">Sub: Automasi &amp; Sistem</div>
+        <div class="card-actions">
+          <button class="btn-play" onclick="playVideo(4)">▶ Play</button>
+          <button class="btn-quiz" onclick="openQuiz('Automasi &amp; Sistem', 4)">Start Quiz</button>
+        </div>
+        <div class="quiz-progress"><div class="bar" id="prog4"></div></div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="video-card">
+      <div class="video-thumb thumb-5">
+        <div class="thumb-people">🤝</div>
+        <div class="play-btn" onclick="playVideo(5)">▶</div>
+        <div class="duration-badge">04:35</div>
+        <div class="quiz-badge" onclick="openQuiz('Interaksi &amp; Kepuasan', 5)">Q Quiz</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Tenaga Perpustakaan Khusus</div>
+        <div class="card-sub">Sub: Interaksi &amp; Kepuasan</div>
+        <div class="card-actions">
+          <button class="btn-play" onclick="playVideo(5)">▶ Play</button>
+          <button class="btn-quiz" onclick="openQuiz('Interaksi &amp; Kepuasan', 5)">Start Quiz</button>
+        </div>
+        <div class="quiz-progress"><div class="bar" id="prog5"></div></div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="video-card">
+      <div class="video-thumb thumb-6">
+        <div class="thumb-people">👩‍🏫</div>
+        <div class="play-btn" onclick="playVideo(6)">▶</div>
+        <div class="duration-badge">04:35</div>
+        <div class="quiz-badge" onclick="openQuiz('Kompetensi &amp; Sertifikasi', 6)">Q Quiz</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Penyelenggaraan Perpustakaan Khusus</div>
+        <div class="card-sub">Sub: Kompetensi &amp; Sertifikasi</div>
+        <div class="card-actions">
+          <button class="btn-play" onclick="playVideo(6)">▶ Play</button>
+          <button class="btn-quiz" onclick="openQuiz('Kompetensi &amp; Sertifikasi', 6)">Start Quiz</button>
+        </div>
+        <div class="quiz-progress"><div class="bar" id="prog6"></div></div>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="video-card">
+      <div class="video-thumb thumb-7">
+        <div class="thumb-people">📋</div>
+        <div class="play-btn" onclick="playVideo(7)">▶</div>
+        <div class="duration-badge">04:35</div>
+        <div class="quiz-badge" onclick="openQuiz('Struktur Organisasi &amp; Kebijakan', 7)">Q Quiz</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Pengelolaan</div>
+        <div class="card-sub">Sub: Struktur Organisasi &amp; Kebijakan</div>
+        <div class="card-actions">
+          <button class="btn-play" onclick="playVideo(7)">▶ Play</button>
+          <button class="btn-quiz" onclick="openQuiz('Struktur Organisasi &amp; Kebijakan', 7)">Start Quiz</button>
+        </div>
+        <div class="quiz-progress"><div class="bar" id="prog7"></div></div>
+      </div>
+    </div>
+
+  </div><!-- /video-grid -->
+</div><!-- /container -->
+</div><!-- /page-beranda -->
+
+<!-- PAGE: TENTANG KAMI -->
+<div id="page-tentang" class="page-section" style="display:none">
+  <div class="hero">
+    <h1>Tentang Digi-Pustaka</h1>
+    <p>Platform pembelajaran digital untuk pengelolaan perpustakaan khusus Indonesia.</p>
+  </div>
+  <div class="container">
+    <div class="about-section">
+      <div class="about-card">
+        <div class="about-icon">🎯</div>
+        <h3>Visi</h3>
+        <p>Menjadi platform rujukan utama pengembangan kompetensi pustakawan khusus di Indonesia yang inovatif, inklusif, dan berdampak luas.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">🚀</div>
+        <h3>Misi</h3>
+        <p>Menyediakan konten edukatif berkualitas tinggi, mendorong digitalisasi perpustakaan, dan membangun ekosistem pembelajaran pustakawan yang berkelanjutan.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">💡</div>
+        <h3>Nilai Kami</h3>
+        <p>Integritas, kolaborasi, inovasi, dan dedikasi terhadap peningkatan kualitas layanan perpustakaan demi kemajuan literasi bangsa.</p>
+      </div>
+    </div>
+    <div class="about-stats">
+      <div class="stat-item"><div class="stat-num">7</div><div class="stat-label">Modul Video</div></div>
+      <div class="stat-item"><div class="stat-num">-</div><div class="stat-label">Pustakawan Aktif</div></div>
+      <div class="stat-item"><div class="stat-num">-</div><div class="stat-label">Provinsi Terjangkau</div></div>
+      <div class="stat-item"><div class="stat-num">-</div><div class="stat-label">Tingkat Kepuasan</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE: KONTAK -->
+<!-- <div id="page-kontak" class="page-section" style="display:none">
+  <div class="hero">
+    <h1>Hubungi Kami</h1>
+    <p>Ada pertanyaan atau masukan? Kami siap membantu Anda.</p>
+  </div>
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div><strong>Alamat</strong><p>Jl. Perpustakaan No. 1, Jakarta Pusat, DKI Jakarta 10110</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div><strong>Telepon</strong><p>(021) 1234-5678</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div><strong>Email</strong><p>info@digi-pustaka.id</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div><strong>Jam Operasional</strong><p>Senin – Jumat: 08.00 – 16.00 WIB</p></div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-group"><label>Nama Lengkap</label><input type="text" placeholder="Masukkan nama Anda..." class="form-input" /></div>
+        <div class="form-group"><label>Email</label><input type="email" placeholder="Masukkan email Anda..." class="form-input" /></div>
+        <div class="form-group"><label>Subjek</label><input type="text" placeholder="Subjek pesan..." class="form-input" /></div>
+        <div class="form-group"><label>Pesan</label><textarea placeholder="Tulis pesan Anda di sini..." class="form-input form-textarea"></textarea></div>
+        <button class="btn-send" onclick="sendMessage()">📨 Kirim Pesan</button>
+      </div>
+    </div>
+  </div>
+</div> --->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-social">
+    <span>Ikuti Kami</span>
+    <div class="social-icon" title="Facebook">f</div>
+    <div class="social-icon" title="Instagram">ig</div>
+    <div class="social-icon" title="YouTube">▶</div>
+  </div>
+  <div>Hak Cipta &copy; .</div>
+</footer>
+
+<!-- =============================================
+     VIDEO MODAL (Google Drive)
+     ============================================= -->
+<div class="video-modal-overlay" id="videoOverlay" onclick="handleVideoOverlayClick(event)">
+  <div class="video-modal">
+
+    <div class="video-modal-header">
+      <span id="videoTitle">Modul 1</span>
+      <button onclick="closeVideoModal()" title="Tutup">&#x2715;</button>
+    </div>
+
+    <!-- Google Drive iframe player -->
+    <div class="video-player-area" id="videoPlayerArea">
+
+      <!-- Placeholder: input Drive ID -->
+      <div id="videoPlaceholder" style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;background:#111;">
+        <div style="font-size:2.8rem;">🎬</div>
+        <div style="font-size:0.92rem;color:#ccc;text-align:center;" id="videoPlaceholderLabel">
+          Masukkan ID Google Drive untuk Modul ini
+        </div>
+        <div style="display:flex;gap:8px;width:100%;max-width:400px;">
+          <input
+            type="text"
+            id="driveIdInput"
+            placeholder="Contoh: 1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs"
+            style="flex:1;padding:10px 14px;border-radius:8px;border:none;font-size:0.88rem;outline:none;"
+          />
+          <button onclick="loadDriveVideo()" class="btn-pick-video" style="white-space:nowrap;">▶ Muat</button>
+        </div>
+        <div style="font-size:0.78rem;color:#888;text-align:center;line-height:1.7;">
+          <b style="color:#90CAF9;">⚠️ Penting:</b> Pastikan video di Google Drive sudah diatur<br>
+          <b style="color:#aaffaa;">"Siapa saja yang memiliki link"</b> → <b style="color:#aaffaa;">Viewer</b><br><br>
+          Cara ambil ID: buka Google Drive → klik kanan video → Bagikan<br>
+          Salin link: drive.google.com/file/d/<b style="color:#90CAF9;">ID_INI</b>/view
+        </div>
+      </div>
+
+      <!-- iframe embed Drive -->
+      <iframe
+        id="driveIframe"
+        style="display:none;width:100%;aspect-ratio:16/9;border:none;"
+        allowfullscreen
+        allow="autoplay; encrypted-media; picture-in-picture"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+
+    </div>
+
+    <!-- Progress bar simulasi -->
+    <div class="video-progress-wrap" id="videoProgressWrap" style="display:none;">
+      <div class="video-progress-track">
+        <div id="videoProgressBar"></div>
+      </div>
+    </div>
+
+    <!-- Status -->
+    <div class="video-status-text" id="videoStatus">
+      📂 Masukkan ID Google Drive untuk memulai video.
+    </div>
+
+    <!-- Timer countdown + tombol selesai -->
+    <div class="video-modal-footer">
+      <div id="videoTimerInfo" style="font-size:0.82rem;color:#888;align-self:center;display:none;">
+        ⏱ Estimasi durasi: <span id="videoTimerDisplay">--:--</span>
+      </div>
+      <button class="btn-video-done" id="videoDoneBtn" onclick="videoDone()" disabled>
+        ⏳ Menonton...
+      </button>
+    </div>
+
+    <!-- Tombol "Sudah Selesai Nonton" manual (backup jika iframe tidak bisa dideteksi) -->
+    <div style="padding:0 18px 14px;text-align:center;" id="manualDoneWrap" style="display:none;">
+      <button class="btn-manual-done" id="btnManualDone" onclick="markVideoWatched()" style="display:none;">
+        ✅ Saya Sudah Selesai Menonton — Buka Kuis
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<!-- =============================================
+     QUIZ MODAL
+     ============================================= -->
+<div class="quiz-modal-overlay" id="quizOverlay" onclick="handleOverlayClick(event)">
+  <div class="quiz-modal" id="quizModal">
+
+    <div class="quiz-modal-header">
+      <span id="quizTitle">Kuis Modul 1: Strategi &amp; Visi</span>
+      <button class="quiz-close" onclick="closeQuiz()">&#x2715;</button>
+    </div>
+
+    <div class="quiz-question-text" id="quizQuestion">
+      Manakah yang merupakan elemen kunci dalam strategi perpustakaan khusus?
+    </div>
+
+    <div class="quiz-options" id="quizOptions"></div>
+
+    <div class="quiz-progress-bar">
+      <div class="bar" id="quizProgressBar" style="width: 20%"></div>
+    </div>
+
+    <div class="quiz-btn-row">
+      <button class="btn-next"   onclick="nextQuestion()">Next</button>
+      <button class="btn-submit" onclick="submitAnswer()">Submit</button>
+    </div>
+
+    <div class="quiz-footer">
+      <span id="quizCounter">Question 1 of 5</span>
+      <span id="quizScore">Score: 0/50</span>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
